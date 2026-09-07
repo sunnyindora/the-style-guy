@@ -31,9 +31,9 @@ export default async function AdminProductsPage() {
               <p className="text-sm text-neutral-500">{products.length} products</p>
             </div>
           </div>
-          <button className="flex items-center gap-2 bg-neutral-900 text-white px-5 py-2.5 text-sm font-semibold uppercase tracking-widest hover:bg-neutral-800">
+          <Link href="/admin/products/new" className="flex items-center gap-2 bg-neutral-900 text-white px-5 py-2.5 text-sm font-semibold uppercase tracking-widest hover:bg-neutral-800">
             <Plus className="w-4 h-4" /> Add Product
-          </button>
+          </Link>
         </div>
 
         <div className="bg-white border border-neutral-200 overflow-x-auto">
@@ -78,9 +78,9 @@ export default async function AdminProductsPage() {
                       <Link href={`/product/${p.slug}`} className="p-2 hover:bg-neutral-100" title="View">
                         <Eye className="w-4 h-4" />
                       </Link>
-                      <button className="p-2 hover:bg-neutral-100" title="Edit">
+                      <Link href={`/admin/products/${p.id}/edit`} className="p-2 hover:bg-neutral-100" title="Edit">
                         <Edit className="w-4 h-4" />
-                      </button>
+                      </Link>
                     </div>
                   </td>
                 </tr>
